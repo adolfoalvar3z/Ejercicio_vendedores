@@ -67,4 +67,15 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  config.action_mailer.default_url_options = {host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'mail.puntoaseo.cl',
+    port: 587,
+    user_name: 'pruebasr0r',
+    password: 'qDX5Lrwz+L',
+    authentication: :login,
+    enable_starttls_auto: true,
+    tls: true
+  }
 end
