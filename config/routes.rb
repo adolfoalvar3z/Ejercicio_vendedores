@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :categories
   #get 'welcome/index'
   get '/welcome', to: "welcome#index"
   
